@@ -44,7 +44,8 @@ jobs:
   build-and-test:
     name: Build and test
     runs-on: ${{ matrix.os }}
-    needs: [check, check-features]
+    needs:
+      - check
     strategy:
       fail-fast: false
       matrix:
@@ -70,8 +71,7 @@ jobs:
       - name: Downstream crate run
         uses: actions-rs/cargo@v1
         with:
-          command: run
-          args: --manifest-path downstream/Cargo.toml
+          command: test
 
   # Deploy to Github pages #
   deploy:
