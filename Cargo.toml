@@ -1,0 +1,38 @@
+[lib]
+proc-macro = true
+
+[package]
+name = "bstringify"
+version = "0.1.0"
+authors = [
+    "Daniel Henry-Mantilla <daniel.henry.mantilla@gmail.com>",
+]
+edition = "2018"
+
+license = "Zlib OR MIT OR Apache-2.0"
+
+documentation = "https://docs.rs/bstringify"
+repository = "https://github.com/danielhenrymantilla/rust-bstringify"
+homepage = "https://crates.io/crates/bstringify"
+
+readme = "README.md"
+
+description = "stringify! that yields byte string literals instead"
+keywords = [
+    "byte_strings",
+    "stringify",
+    "human",
+    "no_std",
+    "b",
+]
+categories = [
+    "rust-patterns",
+]
+
+[features]
+default = []
+
+nightly = []
+
+[package.metadata.docs.rs]
+all-features = true
