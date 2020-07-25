@@ -39,33 +39,6 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: check
-          args: --features trace-macros
-
-  check-features:
-    name: Check all the features combinations on MSRV
-    runs-on: ubuntu-latest
-    needs: check
-    strategy:
-      matrix:
-        feature--trace-macros: ['', '--features trace-macros']
-    steps:
-      - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: 1.45.0
-          override: true
-
-      - name: Clone repo
-        uses: actions/checkout@v2
-
-      - name: Cargo check
-        uses: actions-rs/cargo@v1
-        with:
-          command: check
-          args: |
-            --no-default-features
-            ${{ matrix.feature--trace-macros }}
 
   # == BUILD & TEST == #
   build-and-test:
