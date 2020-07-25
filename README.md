@@ -1,13 +1,11 @@
 # `bstringify!`
 
+> **Like `stringify!`, but yielding byte string literals instead.**
 
 [![Repository](https://img.shields.io/badge/repository-GitHub-brightgreen.svg)](https://github.com/danielhenrymantilla/rust-bstringify)
 [![Latest version](https://img.shields.io/crates/v/bstringify.svg)](https://crates.io/crates/bstringify)
 [![Documentation](https://docs.rs/bstringify/badge.svg)](https://docs.rs/bstringify)
 [![License](https://img.shields.io/crates/l/bstringify.svg)](https://github.com/danielhenrymantilla/rust-bstringify/blob/master/LICENSE)
-
-## Like `stringify!`, but yielding byte string literals instead.
-
 ![CI](https://github.com/danielhenrymantilla/rust-bstringify/workflows/CI/badge.svg)
 
 
